@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% if prod.imagen %}
+  <img class="card-img-top" src="{{ prod.imagen.url }}" alt="{{ prod.nombre }}">
+{% else %}
+  <img class="card-img-top" src="http://placehold.it/700x400" alt="">
+{% endif %}
+{% block content %}
+<h1>{{ producto.nombre }}</h1>
+{% endblock %}
